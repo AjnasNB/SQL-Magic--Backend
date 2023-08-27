@@ -1,13 +1,14 @@
 import express from 'express';
 import Bard from 'bard-ai';
 import cors from 'cors';
-import dotenv from 'dotenv'; // Import dotenv package
-dotenv.config(); // Load environment variables from .env file
+import dotenv from 'dotenv';
+import fetch from 'node-fetch'; // Import node-fetch
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-const myBard = new Bard(process.env.BARD_API_KEY); // Use the environment variable
+const myBard = new Bard(process.env.BARD_API_KEY);
 app.use(cors());
 app.use(express.json());
 
