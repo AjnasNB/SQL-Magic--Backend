@@ -2,9 +2,9 @@
   "name": "bck",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bard.mjs",
   "scripts": {
-    "start": "node index.js",
+    "start": "node bard.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
