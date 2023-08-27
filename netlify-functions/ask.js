@@ -26,5 +26,5 @@ app.post("/ask", async (req, res) => {
     res.status(500).json({ error: "An error occurred" });
   }
 });
-
-module.exports.handler = app;
+app.use('/.netlify/functions/ask', router)
+module.exports.handler = serverless(app);
