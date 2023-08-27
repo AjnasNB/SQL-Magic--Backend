@@ -1,4 +1,11 @@
 {
+  "name": "SQLMagic",
+  "version": "1.0.0",
+  "description": "SQLMagic",
+  "main": "bard.mjs",  
+  "scripts": {
+    "start": "node bard.mjs"
+  },
   "dependencies": {
     "bard-ai": "^2.0.3",
     "cors": "^2.8.5",
