@@ -1,15 +1,13 @@
-// netlify/functions/ask.js
-const express = require('express');
-const Bard = require('bard-ai');
-const cors = require('cors');
-const dotenv = require('dotenv');
-
-dotenv.config();
+import express from 'express';
+import Bard from 'bard-ai';
+import cors from 'cors';
+import dotenv from 'dotenv'; // Import dotenv package
+dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-const myBard = new Bard(process.env.BARD_API_KEY);
+const myBard = new Bard(process.env.BARD_API_KEY); // Use the environment variable
 app.use(cors());
 app.use(express.json());
 
@@ -28,4 +26,6 @@ app.post("/ask", async (req, res) => {
   }
 });
 
-module.exports.handler = app;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
