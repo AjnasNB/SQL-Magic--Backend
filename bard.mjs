@@ -6,7 +6,7 @@ import fetch from 'cross-fetch'; // Import cross-fetch
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port =  5000;
 
 const myBard = new Bard(process.env.BARD_API_KEY, { fetch }); // Pass fetch as an option
 app.use(cors());
